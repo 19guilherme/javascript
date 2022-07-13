@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos no JS</title>
+    <style>
+        body{
+            font-size: 20px;
+            background-color: aqua;
+        }
+
+        h1{
+            color: blue;
+        }
+
+        /* ADICIONA COMENTÁRIOS NO CSS */
+
+    </style>
+</head>
+<body>
+    <h1>Somando valores no window.prompt</h1>
+    <p>
+        var n1 = window.prompt('Digite um número: ') //STRING <br>
+        /* window.prompt RECEBE os valores como STRING */ <br>
+        var n2 = window.prompt('Digite outro número: ') //STRING <br>
+        var s = n1 + n2 <br>
+    </p>
+
+    <p>//(Number + Number) para Adição <br>
+        //(String + String) para Concatenação
+    </p>
+    
+    <h2>Conversão de STRING para NUMBER</h2>
+    <ul>
+        <li>Number.parseInt(n) - (número inteiro 5, -13, 27, ...)</li>
+        <li>Number.parseFloat(n) - (número real 3.14, 5.07, -13.97, ...)</li>
+        <li>Number(n) - O proprio JS fica Responsavel por escolher real ou inteiro.</li>
+    </ul>
+
+    <h2>Conversão de NUMBER para STRING</h2>
+    <ul>
+        <li>String(n)</li>
+        <li>n.toString()</li>
+    </ul>
+
+<hr>
+
+    <h2>Formantando Strings</h2>
+    <h3>var s = 'JavaScript'</h3>
+    <ul>
+        <li>s.length        // quantos caracteres a string tem</li>
+        <li>s.toUpperCase() // TUDO para "MAIÚSCULA"</li>
+        <li>s.toLowerCase() // TUDO para "minúscula"</li>
+    </ul>
+
+    <p>
+        'Eu estou aprendendo s'      // Não faz Interpolação <br>
+        'Eu estou aprendendo ' + s   // Usa Concatenação <br>
+        `Eu estou aprendendo ${s}`   // usa Template string (Usar CRASE AO INVES DE ASPAS).   
+    </p>
+
+    <h4>Exemplo:</h4>
+    <ul>
+        <li>nome = Guilherme</li>
+        <li>idade = 26</li>
+        <li>nota = 7.8</li>
+    </ul>
+    <p>'eu ' + nome + 'tenho ' + idade + 'anos e tirei uma nota de ' + nota // Forma antiga, mas, ainda aceitavel</p>
+
+    <p>`eu ${nome} tenho ${idade} anos, e tirei uma nota de ${nota}` // Forma mais atual de se escrever</p>
+
+    <p><strong>Resultado:</strong> eu Guilherme tenho 26 anos, e tirei uma nota de 7.8</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: ')) //STRING
+        /* window.prompt RECEBE os valores como STRING */
+        var n2 = Number(window.prompt('Digite outro número: ')) //STRING
+        var s = n1 + n2
+        //(Number + Number) para Adição
+        //(String + String) para Concatenação
+
+        window.alert(`A soma entre ${n1} e ${n2} é ${s} `)
+        
+    </script>
+</body>
+</html>
